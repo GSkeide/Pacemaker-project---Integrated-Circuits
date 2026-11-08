@@ -1,0 +1,6 @@
+.\src\gates.v
+.\src\dff.v
+.\src\timer.v
+.\src\fsm.v
+.\src\top.v
+.\src\my_top_tb.v

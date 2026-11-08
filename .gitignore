@@ -1,0 +1,14 @@
+#Active-HDL generated files
+pacemaker/pacemaker/
+pacemaker/compile/
+pacemaker/log/
+*.asdb
+*.wsw
+
+#SPICE output
+*.raw
+*.out
+
+#OS files
+Thumbs.db
+desktop.ini
