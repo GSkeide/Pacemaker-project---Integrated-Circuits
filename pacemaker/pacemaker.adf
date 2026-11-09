@@ -25,6 +25,8 @@ FAMILY=
 /my_top_tb.v=-1
 /testbench.asdb=-1
 /testbench.awc=-1
+/pacemaker_waveform_tb.asdb=-1
+/pacemaker_waveform_tb.awc=-1
 [Files.Data]
 .\src\gates.v=Verilog Source Code
 .\src\dff.v=Verilog Source Code
@@ -34,6 +36,8 @@ FAMILY=
 .\src\my_top_tb.v=Verilog Source Code
 .\src\testbench.asdb=Accelerated Waveform File
 .\src\testbench.awc=Accelerated Waveform Configuration
+.\src\pacemaker_waveform_tb.asdb=Accelerated Waveform File
+.\src\pacemaker_waveform_tb.awc=Accelerated Waveform Configuration
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
