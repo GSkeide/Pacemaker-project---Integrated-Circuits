@@ -16,7 +16,6 @@ module fsm (output P, output R, output A, output B,
  
   next_a my_a_gate (.NEXT_A(nextA), .nT(nT), .H(H), .B(B), .A(A));
  
-  next_b my_b_gate (.NEXT_B(nextB), .nH(nH), .nA(nA), .B(B));
- 												
+ 	next_b my_b_gate (.NEXT_B(nextB), .A(A), .nA(nA), .nH(nH), .B(B));											
   assign R = B;
 endmodule

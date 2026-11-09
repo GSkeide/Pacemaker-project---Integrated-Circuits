@@ -44,7 +44,8 @@ begin
   end;	
   #(20*MS - 2*1953125); // task beats for 20 ms
   H = 1'b0;		 // heartbeat should reset counter	 
-  @(posedge clk); // Reset state, so count is 0 here and starts counting up
+   @(posedge clk); // FSM leaves RESET (01 -> 00), R goes low
+   @(posedge clk); // first counting edge
 end
 endtask
 
@@ -77,7 +78,7 @@ task expect_pace(); // Test pacing when timer exceed 768. Should give a 2 ms pac
 begin		  
     $display("Values before expect_pace() : State = %b%b, Pace = %0d, Reset = %0d, Count = %0d", A,B, P, R, count);
     repeat (768) @(posedge clk); // T = 1: if cycles = 768 or more	 	 			   
-    paces_seen = 0;
+    paces_seen = 0;	
     if (P == 1) paces_seen = paces_seen + 1;
 	if (count == 768)
 		$display("PASS: expect_pace() - Count is %0d; Expected: 768.", count);	  

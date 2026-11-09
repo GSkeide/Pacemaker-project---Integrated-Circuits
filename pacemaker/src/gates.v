@@ -65,15 +65,18 @@ endmodule
 
 
 
-// NEXT_B
-module next_b (output NEXT_B, input nH, input nA, input B);
+//OAI22
+module next_b (output NEXT_B, input A, input nA, input nH, input B);
   supply1 vdd;
   supply0 gnd;
-  wire xn, xp;
-  nmos #1 mnb (NEXT_B, gnd, B);
-  nmos #1 mnh (NEXT_B, xn,  nH);
-  nmos    mna (xn,     gnd, nA);
-  pmos #1 mpb (NEXT_B, xp,  B);
-  pmos    mph (xp,     vdd, nH);
-  pmos    mpa (xp,     vdd, nA);
+  wire xn, xp1, xp2;						
+  nmos #1 mna  (NEXT_B, xn,  A);
+  nmos #1 mnh  (NEXT_B, xn,  nH);
+  nmos    mnna (xn,     gnd, nA);
+  nmos    mnb  (xn,     gnd, B);				 
+  
+  pmos #1 mpa  (NEXT_B, xp1, A);
+  pmos    mph  (xp1,    vdd, nH);
+  pmos #1 mpna (NEXT_B, xp2, nA);
+  pmos    mpb  (xp2,    vdd, B);
 endmodule
