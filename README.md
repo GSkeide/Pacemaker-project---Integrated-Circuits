@@ -40,12 +40,14 @@ Truth table:
 After boolean algebra:
 <img width="1154" height="238" alt="image" src="https://github.com/user-attachments/assets/eed54111-40e1-46b4-b42d-5c44e33634c4" />
 
-The initial sketch used normal gates like this:
-<img width="1302" height="1134" alt="image" src="https://github.com/user-attachments/assets/8fce1929-4678-4686-8c71-2999d15540e9" />
-
-However, we decided to redo it using static cmos, which is what's implemented in the verilog files:
-
+Verilog files are based on static CMOS of the boolean logic:
 <img width="1120" height="1426" alt="image" src="https://github.com/user-attachments/assets/c2a82596-5c35-4ddc-b403-a71f5ba86996" />
+
+The simulation for the verilog files, everything works.:
+<img width="2862" height="518" alt="image" src="https://github.com/user-attachments/assets/0f833d5f-b558-4100-a8c4-e75369709757" />
+Automatic checks passed in console:
+<img width="1840" height="472" alt="image" src="https://github.com/user-attachments/assets/3a73f1d6-5784-460c-b9fa-90613bb97daf" />
+
 
 
 
